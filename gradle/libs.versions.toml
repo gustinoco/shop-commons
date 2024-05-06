@@ -1,32 +1,78 @@
 [versions]
-agp = "8.3.2"
-kotlin = "1.9.23"
-coreKtx = "1.13.0"
-junit = "4.13.2"
-junitVersion = "1.1.5"
-espressoCore = "3.5.1"
-lifecycleRuntimeKtx = "2.7.0"
-activityCompose = "1.9.0"
-composeBom = "2024.04.01"
+module-name = "commons"
+module-version-name = "1.0.0"
+module-version-code = "1"
+module-description = "Module commons function shop"
+module-groupid = "br.com.shop.commons"
+module-hasvariants = "false"
+
+sdk-min = "21"
+sdk-compile = "33"
+sdk-target = "33"
+buildtools = "33.0.2"
+java = "11"
+
+kotlin = "1.7.10"
+gradle = "7.2.1"
+jacoco = "0.8.8"
+detekt = "1.21.0"
+detektrules = "1.0.1.1"
+
+material = "1.9.0"
+gson = "2.10.1"
+coroutines = "1.7.3"
+appcompat = "1.6.1"
+constraintlayout = "2.1.4"
+recyclerview = "1.2.1"
+navigation = "2.5.3"
+
+sa-navigator = "1.0.0"
+sa-network = "1.1.0"
+sa-analytics = "1.1.2"
+ids = "1.94.0"
+
+sample-loginforsamples = "3.1.1"
+sample-cloud = "1.9.4"
+sample-core = "6.1.2"
+sample-sa-integration = "2.6.0"
+sample-retrofit = "2.7.2"
+sample-preference = "1.2.0"
+sample-navigator = "6.0.7"
+test-mockk = "1.13.7"
+test-junitjupiter = "5.8.2"
+test-coretesting = "2.2.0"
 
 [libraries]
-androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
-junit = { group = "junit", name = "junit", version.ref = "junit" }
-androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
-androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
-androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
-androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
-androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
-androidx-ui = { group = "androidx.compose.ui", name = "ui" }
-androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
-androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
-androidx-ui-text = { group = "androidx.compose.ui", name = "ui-text" }
-androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
-androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
-androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
-androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+# Code Quality
+codequality-detektformatting = { group = "io.gitlab.arturbosch.detekt", name = "detekt-formatting", version.ref = "detekt" }
+codequality-detektcli = { group = "io.gitlab.arturbosch.detekt", name = "detekt-cli", version.ref = "detekt" }
+
+# Kotlin
+kotlin-stdlib = { group = "org.jetbrains.kotlin", name = "kotlin-stdlib-jdk8", version.ref = "kotlin" }
+kotlin-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
+kotlin-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
+kotlin-coroutines-playservices = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-play-services", version.ref = "coroutines" }
+
+# Google
+google-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+google-gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
+
+# AndroidX
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+androidx-navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigation" }
+androidx-navigation-ui = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigation" }
+androidx-recyclerview = { group = "androidx.recyclerview", name = "recyclerview", version.ref = "recyclerview" }
+
+# Test
+test-mockk = { group = "io.mockk", name = "mockk", version.ref = "test-mockk" }
+test-junitjupiter-api = { group = "org.junit.jupiter", name = "junit-jupiter-api", version.ref = "test-junitjupiter" }
+test-junitjupiter-engine = { group = "org.junit.jupiter", name = "junit-jupiter-engine", version.ref = "test-junitjupiter" }
+test-coretesting = { group = "androidx.arch.core", name = "core-testing", version.ref = "test-coretesting" }
+test-coroutinestesting = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutines" }
 
 [plugins]
-androidApplication = { id = "com.android.application", version.ref = "agp" }
-jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-
+android-library = { id = "com.android.library", version.ref = "gradle" }
+android-application = { id = "com.android.application", version.ref = "gradle" }
+android-kotlin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref =  "detekt" }
